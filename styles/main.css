@@ -5,6 +5,7 @@
 	--lineheight: 1.65;
 	--userfont: roboto-st, sans-serif;
 	--systemfont: -apple-system, BlinkMacSystemFont, Arial, sans-serif;
+	--wrapper-padding: 120px;
 }
 
 @font-face {
@@ -93,6 +94,30 @@ html, body {
 	opacity: 0.45;
 }
 
+/* контейнер для слайдера */
+.main-wrapper {
+	position: relative;
+	top: 0;
+	left: 0;
+	padding: var(--wrapper-padding) 0 var(--wrapper-padding) 0;
+	height: 100%;
+	z-index: 2;
+}
+
+.main-wrapper::before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-image: url(../images/glow.png);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	animation: anime-glow 1.5s ease-in-out infinite;
+}
+
 /* ANIMATIONS */
 
 @keyframes anime-light {
@@ -104,5 +129,17 @@ html, body {
 	}
 	100% {
 		opacity: 0.2;
+	}
+}
+
+@keyframes anime-glow {
+	0% {
+		opacity: 0.6;
+	}
+	50% {
+		opacity: 0.8;
+	}
+	100% {
+		opacity: 0.6;
 	}
 }
