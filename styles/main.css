@@ -154,6 +154,17 @@ html, body {
 	box-shadow: 0 0 45px 10px #010101;
 }
 
+.carousel-item p {
+	position: absolute;
+	left: 0;
+	bottom: -85px;
+	width: 100%;
+	font-family: Assassin, sans-serif;
+	font-size: 32px;
+	color: rgba(255, 255, 255, 0.5);
+	text-shadow: rgb(58, 78, 94) 0 0 10px;
+}
+
 .carousel-item.swiper-slide-active {
 	opacity: 0.8;
 	transform: scale(1);
