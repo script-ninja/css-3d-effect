@@ -135,6 +135,10 @@ html, body {
 	color: var(--accent);
 }
 
+.carousel .swiper-wrapper {
+	transition: var(--transition);
+}
+
 .carousel-item {
 	position: relative;
 	height: calc(100vh - var(--wrapper-padding) * 2);
