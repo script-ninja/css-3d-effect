@@ -4,6 +4,10 @@ document.addEventListener('DOMContentLoaded', function() {
 		slidesPerView: 3,
 		speed: 1800,
 		centeredSlides: true,
+		navigation: {
+			nextEl: '.navigation-next',
+			prevEl: '.navigation-prev',
+		}
 	});
 
 	document.querySelector('video').playbackRate = 2;
